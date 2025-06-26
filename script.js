@@ -50,43 +50,43 @@ console.log(createPhoneNumber(123456789))
 /////////////
 
 // Задание 4
-// const numbers = [11, 20, 3, 8, 5, 6, 7, 8, 9, 10];
-// function minMax (numbers) {
-//     let min = numbers[0];
-//     let max = numbers[0];
-//     for (let number of numbers) {
-//         if (number < min) {
-//             min = number
-//         }
-//     }
-//     console.log(min)
-//     for (let number of numbers) {
-//         if (number > max) {
-//             max = number
-//         }
-//     }
-//     console.log(max)
-// }
+const numbers = [11, 20, 3, 8, 5, 6, 7, 8, 9, 10];
+function minMax (numbers) {
+    let min = numbers[0];
+    let max = numbers[0];
+    for (let number of numbers) {
+        if (number < min) {
+            min = number
+        }
+    }
+    console.log(min)
+    for (let number of numbers) {
+        if (number > max) {
+            max = number
+        }
+    }
+    console.log(max)
+}
 
-// minMax(numbers)
+minMax(numbers)
 
 
 
 ///////////
 
 //Задание 5
-const numbers = [11, 20, 30, 8, 5, 6, 7, 8, 9, 10];
+const numbers = [11, 20, 30, 8, 16, 6, 7, 8, 9, 10];
 function sortedMax (numbers) {
     let newArray = [];
     while (numbers.length > 0) {
-        let max = numbers[0];
+        let min = numbers[0];
         for (let number of numbers) {
-        if (number > max) {
-            max = number
+        if (number < min) {
+            min = number
         }
     } 
-    newArray.unshift(max);
-    numbers.splice(numbers.indexOf(max), 1);
+    newArray.push(min);
+    numbers.splice(numbers.indexOf(min), 1);
 
 }
     console.log(newArray)
